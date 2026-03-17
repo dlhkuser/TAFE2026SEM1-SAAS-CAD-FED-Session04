@@ -15,7 +15,7 @@ class Message extends Model
       'name',
       'email',
       'subject',
-      'topic_id'.
+      'topic_id',
       'message',
       'read_at'
 

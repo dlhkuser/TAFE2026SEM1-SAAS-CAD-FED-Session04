@@ -1,5 +1,5 @@
 <?php
-// filename: resources/views/static_pages/index.blade.php
+// filename: resources/views/static/thankyou.blade.php
 ?>
 <!doctype html>
 <html lang="{{str_replace('_','-',app()->getLocale())}}">
@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Us | {{ config('app.name','Laravel') }}</title>
+    <title>Thank You | {{ config('app.name','Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net" />
@@ -25,14 +25,12 @@
             /* Styles not used by our page */
         </style>
     @endif
-
 </head>
 <body>
-
-<h1 class="text-4xl text-blue-500">
-    Contact Us
+<h1 class="text-4xl text-red-500">
+    Thank you
 </h1>
 
-
+<a href="{{route('static.contact-us')}}" class="text-xl p-1 bg-blue-100">Thank You Test Link</a>
 </body>
 </html>
