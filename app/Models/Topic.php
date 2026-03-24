@@ -6,18 +6,27 @@ use Illuminate\Database\Eloquent\Model;
 
 class Topic extends Model
 {
-    //
-
+    /**
+     * Mass assignable attributes (table fields)
+     *
+     */
     protected $fillable = [
         'name',
         'description',
         'available',
     ];
 
+    /**
+     * Hidden from serialisation attributes (fields)
+     *
+     */
     protected $hidden = [];
 
-    public function isAvailable():bool
-    {
-        return isset($this->available) && $this->available;
+    /**
+     * Attribute (type) casting
+     *
+     */
+    protected function casts(): array{
+        return [];
     }
 }
